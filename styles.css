@@ -16,8 +16,7 @@ body {
 
 /* CABECERA GIGANTE CON FOTO DE FONDO (BANNER) */
 header.banner-aniversario {
-    background-image: url('https://delivery.pixelbin.io/predictions/outputs/1d/sr/upscaleRestricted/019efc66-18ad-7004-8a57-0304125bcd91/result_0.jpeg');
-    background-size: cover;
+    background-image: url('banner-12anos.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     height: 400px; /* Altura del banner en computadoras */
