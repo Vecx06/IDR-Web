@@ -16,7 +16,7 @@ body {
 
 /* CABECERA GIGANTE CON FOTO DE FONDO (BANNER) */
 header.banner-aniversario {
-    background-image: url('https://delivery.pixelbin.io/predictions/outputs/1d/sr/upscaleRestricted/019efc66-18ad-7004-8a57-0304125bcd91/result_0.jpeg');
+    background-image: url('banner-12anos.jpeg'); /* Imagen de fondo del banner */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -364,5 +364,286 @@ footer {
     }
     .btn-conocenos {
         align-self: center;
+    }
+}
+
+#participar {
+    padding: 60px 0;
+    width: 100%;
+}
+
+.titulo-centrado {
+    text-align: center;
+    display: block !important;
+    margin-bottom: 10px !important;
+}
+
+.titulo-centrado::after {
+    margin: 8px auto 0 auto !important; /* Centra la línea decorativa naranja */
+}
+
+.subtitulo-centrado {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    color: #718096;
+}
+
+/* Distribución de las 3 columnas */
+.grid-participar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas del mismo tamaño */
+    gap: 25px; /* Espacio entre las tarjetas */
+    margin-top: 20px;
+}
+
+/* Diseño de cada Tarjeta Individual */
+.tarjeta-participar {
+    background-color: #fdf8f2; /* Fondo crema cálido a tono con tu diseño */
+    border: 1px solid #f7e6d4; /* Contorno en tono medio */
+    border-radius: 16px; /* Esquinas curvas impecables */
+    overflow: hidden; /* Corta las fotos para que sigan la curva de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.tarjeta-participar:hover {
+    transform: translateY(-5px); /* Se eleva levemente */
+    box-shadow: 0 10px 25px rgba(242, 142, 54, 0.1); /* Sombra naranja suave */
+}
+
+/* Contenedor de la foto */
+.imagen-tarjeta {
+    width: 100%;
+    height: 200px;
+}
+
+.imagen-tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita distorsiones en las imágenes */
+}
+
+/* Textos de la tarjeta */
+.contenido-tarjeta {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.contenido-tarjeta h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    color: #1a202c;
+    margin-bottom: 12px;
+}
+
+.contenido-tarjeta p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-bottom: 20px;
+    flex: 1; /* Empuja el enlace de abajo para que queden alineados */
+    text-align: left !important;
+}
+
+/* Enlace "Más información >" en Naranjo */
+.enlace-tarjeta {
+    color: #f28e36; /* Tu color naranja característico */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.enlace-tarjeta span {
+    margin-left: 6px;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta-participar:hover .enlace-tarjeta {
+    color: #e07b23; /* Naranja más oscuro en hover */
+}
+
+.tarjeta-participar:hover .enlace-tarjeta span {
+    transform: translateX(3px); /* La flecha '>' se desplaza a la derecha en hover */
+}
+
+/* RESPONSIVO PARA PANTALLAS DE CELULARES (Se ponen una debajo de otra) */
+@media (max-width: 768px) {
+    .grid-participar {
+        grid-template-columns: 1fr; /* Pasa de 3 columnas a 1 sola en celulares */
+        gap: 30px;
+    }
+}
+/* ==========================================================================
+   NUEVA SECCIÓN DE CONTACTO (ESTILO GRID SPLIT SCREEN)
+   ========================================================================== */
+
+.contacto-split {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* Divide el espacio de forma asimétrica */
+    gap: 50px;
+    padding: 60px 0;
+    align-items: start;
+}
+
+/* Evita que afecte la línea decorativa naranja global de los h2 en este bloque */
+.contacto-split h2::after {
+    display: none !important;
+}
+
+/* COLUMNA IZQUIERDA: INFORMACIÓN */
+.contacto-info-lado {
+    text-align: left;
+}
+
+.titulo-contacto {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 2.4rem !important;
+    font-weight: 800 !important;
+    color: #f28e36 !important; /* Tu color Naranjo brillante emblemático */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px !important;
+}
+
+.bajada-contacto {
+    font-size: 1.05rem;
+    color: #718096;
+    margin-bottom: 30px;
+    text-align: left !important;
+}
+
+.bloque-dato {
+    margin-bottom: 22px;
+}
+
+.bloque-dato h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 4px;
+}
+
+.bloque-dato p {
+    font-size: 1.05rem;
+    color: #4a5568;
+    text-align: left !important;
+}
+
+.bloque-dato a {
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.bloque-dato a:hover {
+    color: #f28e36; /* Se ilumina en naranjo */
+}
+
+/* COLUMNA DERECHA: TARJETA FORMULARIO */
+.contacto-formulario-lado {
+    width: 100%;
+}
+
+.tarjeta-formulario {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px; /* Bordes redondeados elegantes */
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* Sombra flotante sutil */
+}
+
+.tarjeta-formulario h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #f28e36; /* Tu Naranjo en el título del formulario */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+
+/* Estilo de los campos de texto (Inputs) */
+.tarjeta-formulario input,
+.tarjeta-formulario textarea {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px; /* Bordes suaves */
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #1a202c;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Fila doble para Nombre y Apellido */
+.fila-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+.tarjeta-formulario input:focus,
+.tarjeta-formulario textarea:focus {
+    outline: none;
+    border-color: #f28e36; /* Cambia a tu naranjo */
+    box-shadow: 0 0 0 3px rgba(242, 142, 54, 0.15);
+}
+
+.tarjeta-formulario textarea {
+    resize: vertical; /* Permite estirar abajo pero no a los lados */
+}
+
+/* BOTÓN ENVIAR MENSAJE NARANJO GIGANTE */
+.btn-enviar-mensaje {
+    width: 100%;
+    background-color: #f28e36; /* Naranjo oficial IDR */
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(242, 142, 54, 0.2);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-enviar-mensaje:hover {
+    background-color: #e07b23; /* Naranjo medio más cálido */
+    transform: translateY(-1px);
+}
+
+/* RESPONSIVO PARA COMPRESIÓN EN CELULARES */
+@media (max-width: 768px) {
+    .contacto-split {
+        grid-template-columns: 1fr; /* Pasa a formato vertical de una columna */
+        gap: 40px;
+    }
+    .contacto-info-lado {
+        text-align: center;
+    }
+    .bajada-contacto, .bloque-dato p {
+        text-align: center !important;
+    }
+    .tarjeta-formulario {
+        padding: 30px 20px;
+    }
+    .fila-inputs {
+        grid-template-columns: 1fr; /* Nombre y Apellido se apilan en teléfonos */
+        gap: 0;
     }
 }
