@@ -1,0 +1,368 @@
+/* Importación correcta de tipografías */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+/* CABECERA GIGANTE CON FOTO DE FONDO (BANNER) */
+header.banner-aniversario {
+    background-image: url('https://delivery.pixelbin.io/predictions/outputs/1d/sr/upscaleRestricted/019efc66-18ad-7004-8a57-0304125bcd91/result_0.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px; /* Altura del banner en computadoras */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Empuja el menú hacia abajo */
+}
+
+/* Oculta de forma limpia el texto H1 para lucir la imagen */
+header.banner-aniversario h1 {
+    display: none; 
+}
+
+/* MENÚ DE NAVEGACIÓN ESTILO CRISTAL SOBRE LA IMAGEN */
+header.banner-aniversario nav {
+    background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco translúcido */
+    backdrop-filter: blur(8px); /* Efecto difuminado moderno */
+    -webkit-backdrop-filter: blur(8px);
+    width: 100%;
+    border-top: 1px solid rgba(242, 142, 54, 0.2);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+header.banner-aniversario nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+}
+
+header.banner-aniversario nav li {
+    margin: 0 15px;
+}
+
+header.banner-aniversario nav a {
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+header.banner-aniversario nav a:hover {
+    background-color: #fff3e0; /* Fondo crema suave */
+    color: #f28e36; /* Naranjo oficial IDR */
+}
+
+/* CONTENEDOR DE LAS SECCIONES */
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+section {
+    padding: 50px 0;
+    border-bottom: 1px solid #edf2f7;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Títulos de sección */
+section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #1a202c;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #f28e36;
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+section p {
+    font-size: 1.05rem;
+    color: #4a5568;
+}
+
+/* TARJETAS "NUESTRA VISIÓN / MISIÓN" */
+.intro {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.bloques-proposito {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.bloque-crema {
+    background-color: #fdf8f2; /* Crema de tus publicaciones */
+    border: 1px solid #f7e6d4;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.bloque-crema h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #1a202c;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* CULTURA Y VALORES */
+.valores-iglesia {
+    margin-top: 30px;
+}
+
+.valores-iglesia h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #1a202c;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.grid-valores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.grid-valores span {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #2d3748;
+}
+
+/* HORARIOS DE SERVICIOS */
+#servicios ul {
+    list-style: none;
+    background-color: #fdf8f2;
+    padding: 25px 30px;
+    border-radius: 12px;
+    border: 1px solid #f7e6d4;
+    margin-top: 20px;
+}
+
+#servicios li {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    font-size: 1.05rem;
+    color: #2d3748;
+    font-weight: 500;
+    border-bottom: 1px solid #f7e6d4;
+}
+
+#servicios li:last-child {
+    border-bottom: none;
+}
+
+#servicios li::before {
+    content: "🔸";
+    margin-right: 12px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #1a202c;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.95rem;
+}
+
+/* ADAPTABILIDAD PARA CELULARES */
+@media (max-width: 768px) {
+    header.banner-aniversario {
+        height: 220px; /* Banner más bajo en pantallas de celular */
+    }
+    main {
+        padding: 20px 20px;
+    }
+    .bloques-proposito, .grid-valores {
+        grid-template-columns: 1fr;
+    }
+    header.banner-aniversario nav ul {
+        flex-wrap: wrap;
+    }
+    header.banner-aniversario nav li {
+        margin: 4px 6px;
+    }
+}
+
+/* ==========================================================================
+   AGREGADO: SECCIÓN DE BIENVENIDA (ESTILO SPLIT-SCREEN EN TONOS CÁLIDOS)
+   ========================================================================== */
+
+.bienvenida-hero {
+    background-color: #fdf8f2; /* Tono medio crema cálido */
+    border: 1px solid #f7e6d4; /* Contorno en tono medio arena */
+    color: #2d3748;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 60px 40px !important;
+    border-radius: 16px;
+    margin-top: 20px;
+    align-items: center;
+    border-bottom: none !important;
+}
+
+/* Evita que afecte la línea decorativa global en este bloque */
+.bienvenida-hero h2::after {
+    display: none !important;
+}
+
+/* COLUMNA IZQUIERDA */
+.columna-izquierda {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titulo-gigante {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    color: #1a202c !important; /* Tono medio oscuro */
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 15px !important;
+}
+
+.lema-iglesia {
+    font-size: 1.1rem;
+    color: #4a5568 !important;
+    margin-bottom: 25px;
+}
+
+/* BOTÓN DESTACADO NARANJO IDR */
+.btn-conocenos {
+    background-color: #f28e36; /* Naranjo brillante de la marca */
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 12px 32px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(242, 142, 54, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-conocenos:hover {
+    background-color: #e07b23;
+    transform: translateY(-2px);
+}
+
+/* COLUMNA DERECHA */
+.columna-derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.caja-horarios {
+    margin-bottom: 25px;
+}
+
+.titulo-horarios {
+    font-size: 1.1rem;
+    color: #1a202c;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.subtitulo-horarios {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 15px;
+}
+
+.reuniones-semana {
+    margin-top: 20px;
+}
+
+/* CÁPSULAS DE HORARIOS */
+.capsulas-horas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hora-capsula {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f28e36; /* Naranjo oficial */
+    border: 2px solid #f7e6d4;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background-color: #ffffff; /* Fondo blanco impecable */
+    transition: all 0.3s ease;
+}
+
+.hora-capsula:hover {
+    border-color: #f28e36;
+    background-color: #fff3e0;
+    transform: scale(1.03);
+}
+
+/* UBICACIÓN INFERIOR (AGRANDADA) */
+.ubicacion-rapida {
+    margin-top: 25px; /* Más separación con los horarios de arriba */
+}
+
+.direccion-texto {
+    font-size: 1.3rem; /* Texto significativamente más grande e imponente */
+    color: #2d3748 !important;
+    font-weight: 700; /* Letra un poco más gruesa para que resalte */
+    letter-spacing: -0.2px;
+}
+
+
+/* RESPONSIVO INTEGRADO PARA MÓVILES */
+@media (max-width: 768px) {
+    .bienvenida-hero {
+        grid-template-columns: 1fr;
+        padding: 40px 20px !important;
+        gap: 35px;
+    }
+    .columna-izquierda, .columna-derecha {
+        align-items: center;
+        text-align: center;
+    }
+    .titulo-gigante {
+        font-size: 2.3rem !important;
+    }
+    .btn-conocenos {
+        align-self: center;
+    }
+}
