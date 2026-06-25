@@ -651,129 +651,123 @@ footer {
    SECCIÓN UBICACIÓN PRESET (ESTILO SPLIT CON MAPA VIVO)
    ========================================================================== */
 
+/* ==========================================================================
+   SECCIÓN UBICACIÓN (CORRECCIÓN DE DOS COLUMNAS EN PC Y CÁPSULAS NARANJAS)
+   ========================================================================== */
+
 .ubicacion-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Mitad de pantalla para el mapa, mitad para datos */
-    gap: 45px;
-    padding: 60px 0;
-    align-items: center;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Fuerza a ponerse lado a lado en PC */
+    gap: 50px !important;
+    padding: 60px 0 !important;
+    align-items: center !important;
+    width: 100% !important;
 }
 
-/* Fuerza a que el H2 no herede la línea decorativa inferior global */
+/* Elimina líneas viejas del título */
 .ubicacion-container h2::after {
     display: none !important;
 }
 
-/* CAJA DEL MAPA (IZQUIERDA) */
 .mapa-lado {
-    width: 100%;
-    height: 380px;
-    border-radius: 16px; /* Curvatura limpia en las esquinas */
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
+    width: 100% !important;
+    height: 400px !important; /* Altura del mapa */
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* BLOQUE DE INFORMACIÓN (DERECHA) */
 .info-lado {
-    text-align: left;
+    text-align: left !important;
 }
 
 .titulo-ubicacion {
     font-family: 'Inter', sans-serif !important;
     font-size: 2.4rem !important;
     font-weight: 800 !important;
-    color: #f28e36 !important; /* Tu color Naranjo brillante emblemático */
+    color: #f28e36 !important; /* Naranjo oficial IDR */
     text-transform: uppercase;
-    letter-spacing: 0.5px;
     margin-bottom: 5px !important;
 }
 
 .sede-texto {
-    font-size: 1.1rem;
-    color: #718096;
-    margin-bottom: 20px;
+    font-size: 1.1rem !important;
+    color: #718096 !important;
+    margin-bottom: 20px !important;
 }
 
 .direccion-bloque p {
-    font-size: 1.15rem;
-    color: #1a202c;
-    line-height: 1.5;
+    font-size: 1.25rem !important; /* Dirección grande como querías */
+    color: #1a202c !important;
+    line-height: 1.5 !important;
     text-align: left !important;
 }
 
-/* Línea horizontal en tono cálido sutil */
 .separador-linea {
-    border: 0;
-    height: 1px;
-    background-color: #f7e6d4;
-    margin: 25px 0;
+    border: 0 !important;
+    height: 1px !important;
+    background-color: #f7e6d4 !important; /* Línea crema cálida */
+    margin: 25px 0 !important;
 }
 
-/* CÁPSULAS DE HORARIOS ESTILO BOTÓN */
+/* REDISEÑO DE CÁPSULAS OVALADAS NARANJAS */
 .horarios-fila {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+    display: flex !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 30px !important;
 }
 
 .hora-boton {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #f28e36; /* Texto naranja oficial */
-    border: 2px solid #f28e36; /* Borde naranja característico */
-    padding: 10px 24px;
-    border-radius: 25px; /* Forma de cápsula ovalada exacta */
-    background-color: #ffffff;
-    transition: all 0.2s ease;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #f28e36 !important; /* Texto naranjo */
+    border: 2px solid #f28e36 !important; /* Borde naranjo */
+    padding: 10px 24px !important;
+    border-radius: 25px !important; /* Óvalo perfecto */
+    background-color: #ffffff !important;
+    display: inline-block !important;
 }
 
-.hora-boton:hover {
-    background-color: #fff3e0; /* Fondo crema muy suave al pasar el mouse */
-    transform: scale(1.02);
-}
-
-/* ENLACES A APLICACIONES DE GPS */
+/* ACCESOS A APLICACIONES */
 .apps-navegacion {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: flex !important;
+    gap: 20px !important;
+    flex-wrap: wrap !important;
 }
 
 .link-app {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #4a5568;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: color 0.2s ease;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #4a5568 !important;
+    text-decoration: none !important;
 }
 
 .link-app:hover {
-    color: #f28e36; /* Se ilumina en naranja al pasar el mouse */
+    color: #f28e36 !important;
 }
 
-/* RESPONSIVO AJUSTABLE PARA CELULARES */
+/* RESPONSIVO AUTOMÁTICO EN CELULARES */
 @media (max-width: 768px) {
     .ubicacion-container {
-        grid-template-columns: 1fr; /* Cambia a una sola columna vertical */
-        gap: 35px;
+        grid-template-columns: 1fr !important; /* Pasa a una columna vertical en teléfonos */
+        gap: 35px !important;
     }
     .mapa-lado {
-        height: 280px; /* Reducción de tamaño del mapa en pantallas chicas */
+        height: 280px !important;
     }
     .info-lado {
-        text-align: center;
+        text-align: center !important;
     }
     .direccion-bloque p {
         text-align: center !important;
     }
     .horarios-fila, .apps-navegacion {
-        justify-content: center;
+        justify-content: center !important;
     }
 }
+
 /* AJUSTE PARA EL MAPA VISUAL FIJO CON ENLACE */
 .mapa-lado a {
     display: block;
